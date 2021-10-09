@@ -1,0 +1,387 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+*{
+	 box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-o-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+body{
+	margin:0;
+	font-family: 'Open Sans', sans-serif; 
+	background: #99FFFF;
+	color: #4939D7 ;
+
+}
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Noticia Text', sans-serif;
+	letter-spacing: 1.5px;
+}
+.section-titulo {
+	text-align: center;
+	font-size: 40px;
+	color:#4939D7;
+}
+
+.contenedor {
+    margin: auto;
+    width: 98%;
+
+}
+
+/*--------------------Estilo del header----------------------*/
+
+.header{
+	height: 60px;
+}
+
+.header .contenedor {
+	display: flex;
+	justify-content: space-between;
+}
+.logo, .icon-menu {
+	margin:5px;
+	color: white;
+}
+
+.icon-menu {
+   display: block;
+   width: 40px;
+   height: 40px;
+   font-size: 30px;
+   background: white;
+   color: black;
+   text-align: center;
+   line-height: 45px;
+   border-radius: 5px;
+   margin-left: auto;
+   cursor: pointer;
+}
+/*----------------------Estilo de Menu----------------------*/
+
+.nav {
+	position: absolute;
+	top: 60px;
+	left: -100%;
+	width: 100%;
+	transition: all 0.4s;
+
+}
+
+a.menu-link{
+	color: white;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-link {
+	display: block;
+	padding: 15px;
+	background:white;/*#4939D7*//*#99FFFF*/
+	text-decoration: none;
+	color:#333;
+}
+
+.menu-link:hover, .select {
+    background: #99FFFF;/*#4939D7*/
+    color: white;
+}
+
+.mostrar {
+	left: 0;
+}
+
+.banner {
+	margin-top: 30px;
+	background:#004F84 ;/**/
+	color: #004F84 ; 
+
+}
+
+img {
+	width: 50%;
+	height: 50%;
+    margin-left: 25%;
+  /*si quitamos esto el fondo azul desaparece*/
+}
+
+
+
+/*-------------------------------------------------Estilo de banners----------------------------------------------*/
+
+
+.banner {
+	margin-top: -60px;
+	position: relative;
+	z-index: -1000;
+	margin-bottom: 30px;
+}
+
+.banner .contenedor {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	width:100%;
+	color: white;
+	text-align: center; 
+	text-shadow: 3px -2px 1px red, -4px 3px 2px red;
+
+}
+
+.banner-txt {
+	display: none;
+}
+
+/*--------------------------Estilo de Info------------------------------------*/
+
+.info-columna {
+	background: #333;
+	color: white;
+	padding: 15px;
+	margin-bottom: 30px;
+}
+
+
+/*--------------------------Estilo de Marcas y modelos------------------------------------*/
+.marca-columna {
+    position:relative; 
+    margin-bottom: 30px;
+}
+
+.marca-img {
+	width: 100%;
+	margin:0;
+}
+
+.marca-descripcion {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #fff;
+    background: rgba(0,0,0,0.5); 
+    width: 60%;
+    height: 100%;
+    padding: 5px;
+}
+
+.marca-titulo {
+	font-size: 25px;
+	margin:5px 0;
+}
+/*----------------------------Footer------------------------------------*/
+
+.footer{
+	background: #333;
+	color: white;
+	padding: 10px;
+	text-align: center;
+}
+
+.footer .redes-sociales [class^="icon-"] {
+	display: inline-block;
+	color: black;
+	text-decoration: none;
+	font-size: 30px;
+	padding: 10px;
+	background: white;
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	line-height: 30px;
+}
+
+/*----------------------------Responsive------------------------------------*/
+
+@media(min-width:480px) {
+	.logo{
+		font-size: 40px;
+	}
+	.banner-titulo{
+		font-size: 30px;
+		margin: 5px 0;
+	}
+
+	.banner-txt {
+		display: block;
+		font-size: 18px;
+		margin: 7px 0;
+	}
+
+	.info, .marca{
+		display: flex;
+		justify-content: space-between;
+		margin-top: -30px;
+	}
+	.info-columna{
+		width: 32%;
+
+	}
+	.info-titulo  {
+		font-size: 140%;
+		margin: 5px 0;
+		text-align: center;
+    			
+	}
+	
+    .section-titulo{
+    	width: 100%;
+    }
+
+    .marca{/*cursos*/
+		flex-wrap: wrap;
+   -moz-flex-wrap: wrap;
+   -webkit-flex-wrap: wrap;
+   -o-flex-wrap:wrap;
+   -ms-flex-wrap: wrap;
+		margin-top: 0;
+   -moz-margin-top: 0;
+   -webkit-margin-top: 0;
+   -o-margin-top:0;
+   -ms-margin-top:0;
+
+
+	}
+
+    .marca-columna{
+    	width: 48%;
+   -moz-width:48%;
+   -o-width:48%;
+   -ms-width:48%;
+
+    }     
+
+    .marca-img{
+    	height: 110%;
+    }
+    .marca-descripcion{
+    	font-size: 80%;
+    	text-align: center;
+    	height: 110%;
+    	padding: 0;
+    	/*margin: 5px 0;*/
+    }
+
+    .footer .redes-sociales [class^="icon-"] {
+
+    	margin: 0 10px;
+    }
+}
+
+@media(min-width:768px){
+  .banner-titulo {
+  	font-size: 40px;
+  }    
+
+  .marca-titulo{
+  	font-size: 37px;
+  }  
+}
+
+@media(min-width: 1024px){
+    .contenedor{
+    	width: 1000px;
+    }
+    .section-titulo{
+    	font-size: 50px;
+    	margin: 30px 0;
+    }
+
+    .nav{
+    	position: static;
+    	width: auto;
+    }
+
+    .menu{
+    	display: flex;
+    }
+
+    .icon-menu{
+    	display: none;
+    }
+    .menu-link{
+    	background: none;
+    	color: yellow;
+    	font-size: 20px;
+    }
+    .select{
+    	background: black;
+    	color: #fff;
+    }
+
+    .logo-img{
+    	width: 30%;
+    	height: 30%;
+    	padding-top: 2%;
+    	padding-bottom: 2%;
+    	margin-left: 35%;
+
+    }
+
+	.banner-titulo{
+		font-size: 60px;
+	}
+
+	.info{
+		margin-top: 20px;
+	}
+
+	.info-columna{
+        padding: 30px;
+	}
+
+	.marca-titulo{
+		font-size: 50px;
+	}
+	.marca-columna{
+		margin-bottom: 5%;
+
+	}
+	.info-titulo{
+		font-size: 40px;
+		text-align: center;
+	}
+
+	.marca-txt {
+		font-size: 20px;
+	}
+
+	.marca-descripcion{
+		font-size: 20px;
+		/*display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;*/
+	}
+}
+
+@media(min-width: 1280px){
+	.contenedor {
+		width: 1200px;
+	}
+
+	.logo {
+		font-size: 100px;
+	}
+
+	.banner .contenedor{
+		top: 40%;
+	}
+
+	.info{
+		margin-top: 10px;
+	}
+}
+
+
